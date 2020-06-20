@@ -1,0 +1,721 @@
+* {
+  box-sizing: border-box;
+  cursor: default;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* BEGIN: Calendar Table */
+table{
+  width: 90%;
+  margin: 0 auto;
+}
+
+td {
+  text-align: center;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+#selectable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 450px;
+}
+
+.selectedDate {
+  background-color: rgb(151, 206, 206);
+  color: white;
+}
+
+.weekendColor {
+    background: lightgrey;
+}
+
+.actualDayColor{
+  border: 1px solid gold;
+}
+
+/* END: Calendar Table */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown a{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+#showContent{
+  display: block;
+}
+
+#hideContent{
+  display: none
+}
+
+.dropdown:hover{
+  background-color: rgb(151, 206, 206);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+@media only screen and (min-width: 100px) {
+  #pickedDays{
+    margin-top: .5em;
+  }
+
+  #pickedDays button{
+    padding: 5px;
+    border: 1px solid rgb(151, 206, 206);
+    background-color: white;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  #pickedDays button:hover{
+    border: 1px solid red;
+  }
+
+  #pickedDays button:active{
+    background-color: red;
+    color: white;
+  }
+  button.calenderNav {
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+    border: none;
+    outline: none;
+  }
+
+  #header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 100px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    height: 80px;
+  }
+
+  #header.active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  #title {
+    justify-content: center;
+    padding-top: .5em;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: center;
+  }
+
+  #title h1 {
+    text-align: center;
+    font-size: 3.5vw;
+  }
+
+  #subtitle {
+    margin: .5em 0;
+    text-align: center;
+  }
+
+  #subtitle h3 {
+    font-weight: 300;
+    font-size: 3vw;
+  }
+
+  #subtitle img {
+    width: 50px;
+  }
+
+  #title a, #navigation a {
+    color: black;
+    text-decoration: none;
+  }
+
+  #title a {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #navigation {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: .5em auto;
+    width: 100%;
+    align-items: center;
+  }
+
+  #navigation h2 {
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 3vw;
+    padding: 14px 0;
+    width: 100%;
+  }
+
+  #navigation h2:hover {
+    text-decoration: none;
+  }
+
+  main {
+    width: 80%;
+    margin: auto;
+  }
+
+  main h1 {
+    font-size: 30px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  #home {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fullSizeImage {
+    width: 100%;
+    text-align: center;
+  }
+
+  .fullSizeImage img {
+    background-color: rgb(151, 206, 206);
+    width: 100%;
+    align-self: center;
+  }
+
+  #information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #information h2 {
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    margin-bottom: .5em;
+  }
+
+  #courses {
+    text-align: center;
+  }
+
+  #courses .overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #courses article {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    box-shadow: rgb(136, 136, 136) 5px 10px 18px;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+
+  .courseimage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .courseimage img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .paddingLeft {
+    padding-left: 1em;
+  }
+
+  #courses h2 {
+    font-weight: 300;
+    margin: 1em 0;
+  }
+
+  .courseinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 0 1em 0;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px;
+  }
+
+  #courses button {
+    width: 80%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #courses ul {
+    margin-top: auto;
+    font-weight: 300;
+  }
+
+  .duration {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  .courseText .duration {
+    text-align: left;
+  }
+
+  #review {
+    text-align: center;
+  }
+
+  #review .reviewImage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+
+  .reviewImage img {
+    width: 100px;
+    height: 100px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .reviewImage h2 {
+    font-size: 15px;
+  }
+
+  .reviewtext {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviewtext:hover .slideBtn {
+    display: block;
+    margin: 0 1em;
+    height: 50px;
+    width: 50px;
+    align-self: center;
+    border: none;
+    background-color: white;
+    font-size: 30px;
+    color: #ffb884;
+  }
+
+  .box2 {
+    width: 100%;
+    border: 4px solid rgb(151, 206, 206);
+    border-radius: 25px;
+    background-color: rgb(151, 206, 206);
+    padding: 20px;
+    text-align: left;
+    color: white;
+    position: relative;
+    min-height: 250px;
+    box-shadow: rgb(136, 136, 136) 5px 10px 18px;
+  }
+
+  .sb11:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid rgb(151, 206, 206);
+    top: -23px;
+  }
+
+  .slideBtn {
+    display: none;
+  }
+
+  #aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #aboutme article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #aboutme img {
+    max-width: 150px;
+  }
+
+  #contact {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  form label {
+    margin-bottom: 0.5em;
+  }
+
+  #contact .contactInput {
+    padding: 15px;
+  }
+
+  #contact textarea {
+    min-height: 150px;
+  }
+
+  #contact #submitBtn {
+    width: 150px;
+    margin: 0;
+  }
+
+  #dataprotection{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #dataprotection a {
+    color: black;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 1em;
+  }
+
+  .btn {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: rgb(151, 206, 206);
+  }
+
+  .btnContainer {
+    justify-self: flex-end;
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5vw;
+  }
+
+  footer section {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+  }
+
+  footer section a {
+    color: black;
+  }
+
+  footer section h3 {
+    font-weight: 300;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  .marginTop {
+    margin-top: 1em;
+  }
+
+  .marginBottom {
+    margin-bottom: 1em;
+  }
+
+  #contactRetreats {
+    margin: 1em auto;
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgb(136, 136, 136) 5px 10px 18px;
+  }
+
+  .contactCourseImage {
+    display: none;
+  }
+
+  .contactCourseImage img {
+    display: none;
+  }
+
+  textarea {
+     font-family: inherit;
+     font-size: inherit;
+     min-height: 200px;
+     padding: 5px;
+     border-radius: 5px;
+  }
+  .subpageContactForm {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+  }
+
+  .subpageContactForm input {
+    min-height: 35px;
+    padding: 5px;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  #contactRetreats h1 {
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+
+  #user {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .userInformation {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+  }
+
+  .displayDays {
+
+}
+
+input#pickedDays {
+      width: 100%;
+      /* margin: auto; */
+      min-height: 35px;
+      margin-top: 0.5em;
+      padding: 5px;
+      font-family: inherit;
+      font-size: inherit;
+  }
+
+@media only screen and (min-width: 600px) {
+  #header {
+    flex-direction: row;
+  }
+
+  #title {
+    width: 30%;
+  }
+
+  #title h1 {
+    font-size: 2.5vw;
+  }
+
+  #subtitle h3 {
+    font-size: 2vw;
+  }
+
+  #navigation {
+    width: 70%;
+  }
+
+  #navigation h2 {
+    font-size: 2.5vw;
+  }
+
+  #courses article {
+    width: 60%;
+    align-self: center;
+  }
+
+  .courseimage img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .courseimage {
+    align-items: normal;
+  }
+
+  #review .reviewImage {
+    margin-bottom: 1em;
+    align-items: flex-start;
+  }
+
+  .reviewtext {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sb11:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid rgb(151, 206, 206);
+    top: -23px;
+  }
+
+  #contactRetreats{
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  .subpageContactForm {
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+  }
+
+.headerMonth {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+  .contactCourseImage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .contactCourseImage img {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  main{
+    width: 90%;
+  }
+
+  #title h1 {
+    font-size: 2vw;
+  }
+
+  #subtitle h3 {
+    font-size: 1.5vw;
+  }
+
+  #navigation h2 {
+    font-size: 1.5vw;
+  }
+
+  .fullSizeImage img {
+    width: 80%;
+  }
+
+  #courses .overview {
+    display: grid;
+    grid-template-columns: repeat(3, 31.33%);
+    grid-column-gap: 1%;
+  }
+
+  #courses article {
+    width: 100%;
+    align-self: normal;
+  }
+
+  .reviewImage {
+    margin-bottom: 0;
+    min-width: 200px;
+  }
+
+  .reviewtext {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  .sb11:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid rgb(151, 206, 206);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    left: -24px;
+    top: 15px;
+  }
+
+  footer {
+    font-size: 1vw;
+  }
+}
