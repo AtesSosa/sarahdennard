@@ -39,13 +39,17 @@
             <h2>Home</h2>
           </a>
           <div class="dropdown">
-            <a href="#courses">
-              <h2>Kurse</h2>
-              <button class="dropbtn" onclick="toggleContent()">
+            <div class="dropdownDiv">
+
+              <a href="#courses">
+                <h2>Kurse</h2>
+              </a>
+              <button class="dropbtn" onclick="toggleDropdownContent()">
                 <i id="showContent" class="fa fa-caret-down"></i>
                 <i id="hideContent" class="fa fa-caret-up"></i>
               </button>
-            </a>
+            </div>
+            <!-- </a> -->
             <div class="dropdown-content">
               <a href="#">Retreats</a>
               <a href="#">Workshops & Vorträge</a>
@@ -66,13 +70,14 @@
         <!-- main -->
         <main>
           <section class="courseText">
-            <h2>Retreats</h2>
+            <h1>Retreats</h1>
             <div class="courseinfo">
+              <img src="../images/Meditation.gif" alt="">
               <p>Persönliche Retreats in einer inspirierenden Umgebung (meistens in der Natur). Hier kümmere ich mich um DEINE Bedürfnisse und du erlebst Selbstfürsorge aus erster Hand, nimmst eine Auszeit vom Alltag & lernst wie du fürsorglich und achtsam in die Arbeitswelt zurückkehren kannst.</p>
+              <ul class="duration">
+                <li>Dauer: 2-4 Tage</li>
+              </ul>
             </div>
-            <ul class="duration">
-              <li>Dauer: 2-4 Tage</li>
-            </ul>
           </section>
           <section id="contactRetreats">
             <h1>Unverbindliche Anfrage</h1>
@@ -142,7 +147,7 @@
         <script src="../scripts/headerShadow.js"></script>
         <script src="../scripts/calendar.js"></script>
         <script type="text/javascript">
-          function toggleContent(){
+          function toggleDropdownContent(){
               var showIcon = document.getElementById("showContent");
               var hideIcon = document.getElementById("hideContent");
               var dropdownContent = document.getElementsByClassName("dropdown-content");
