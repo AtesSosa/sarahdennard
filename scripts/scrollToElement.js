@@ -13,7 +13,8 @@ $(document).ready(function(){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({scrollTop: targetOffset}, 'slow', function(){
         // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = "btn_"+hash ;
+        hash = hash.replace("#", "");
+        window.location.hash = "/"+hash ;
       });
     } // End if
   });

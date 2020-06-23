@@ -9,8 +9,6 @@
         <meta name="keyword" content="Sarah Dennard, Achtsamkeit, Wohlfühlen, well-being, mindfulness, empathy, love, workshop, retreats, consulting">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="timeline.css">
-        <link rel="stylesheet" href="progress_bar/progress-bar.css">
 
 
         <!-- for jQuery-->
@@ -34,7 +32,22 @@
           </section>
           <section id="navigation">
             <a href="#information"><h2>Home</h2></a>
-            <a href="#courses"><h2>Kurse</h2></a>
+            <div class="dropdown">
+              <div class="dropdownDiv">
+                <a href="#courses">
+                  <h2>Kurse</h2>
+                </a>
+                <button class="dropbtn" onclick="toggleDropdownContent()">
+                  <i id="showContent" class="fa fa-caret-down"></i>
+                  <i id="hideContent" class="fa fa-caret-up"></i>
+                </button>
+              </div>
+              <div class="dropdown-content">
+                <a href="courses/retreats.html">Retreats</a>
+                <a href="courses/workshops.html">Workshops & Vorträge</a>
+                <a href="courses/consulting.html">Consulting</a>
+              </div>
+            </div>
             <a href="#review"><h2>Erfahrungen</h2></a>
             <a href="#aboutme"><h2>Über mich</h2></a>
             <a href="#contact"><h2>Kontakt</h2></a>
@@ -70,7 +83,7 @@
             <div class="overview marginTop">
               <article class="">
                 <div class="courseimage">
-                  <img src="images/retreats250.jpg">
+                  <img src="images/Meditation.gif">
                   <!-- Bild von Sasin Tipchai -->
                 </div>
                 <h2>Retreats</h2>
@@ -81,12 +94,12 @@
                   <li>Dauer: 2-4 Tage</li>
                 </ul>
                 <div class="btnContainer">
-                  <a href="subpages/retreats.html"><button class="btn">Mehr Infos</button></a>
+                  <a href="courses/retreats.html"><button class="btn">Mehr Infos</button></a>
                 </div>
               </article>
               <article class="">
                 <div class="courseimage">
-                  <img src="images/workshop250.jpg">
+                  <img src="images/ProductTour.gif">
                   <!-- Bild von shushipu -->
                 </div>
                 <h2>Workshops & Vorträge</h2>
@@ -105,12 +118,12 @@
                   <li>Dauer: 1,5 Std - 1 Tag</li>
                 </ul>
                 <div class="btnContainer">
-                  <button class="btn">Mehr Infos</button>
+                  <a href="courses/workshops.html"><button class="btn">Mehr Infos</button></a>
                 </div>
               </article>
               <article class="">
                 <div class="courseimage">
-                  <img src="images/consulting250.jpg">
+                  <img src="images/HighFive.gif">
                   <!-- Bild von StartupStockPhotos -->
                 </div>
                 <h2>Consulting</h2>
@@ -120,7 +133,7 @@
                 <ul class="duration">
                 </ul>
                 <div class="btnContainer">
-                  <button class="btn">Mehr Infos</button>
+                  <a href="courses/consulting.html"><button class="btn">Mehr Infos</button></a>
                 </div>
               </article>
             </div>
@@ -128,9 +141,6 @@
           <section id="review" class="marginTop marginBottom">
             <h1>Erfahrungen</h1>
             <article class="reviewtext marginTop marginBottom">
-              <!--
-                <button class="slideBtn" onclick="plusDivs(-1)">&#10094;</button>
-              -->
               <div class="reviewImage">
                 <img src="images/Personas/max-mustermann.png">
                 <h2>Max Mustermann</h2>
@@ -142,14 +152,8 @@
                 </p>
                 </div>
               </div>
-              <!--
-                <button class="slideBtn" onclick="plusDivs(1)">&#10095;</button>
-              -->
             </article>
             <article class="reviewtext marginTop marginBottom">
-            <!--
-              <button class="slideBtn" onclick="plusDivs(-1)">&#10094;</button>
-            -->
               <div class="reviewImage">
                 <img src="images/Personas/erika-mustermann.png">
                 <h2>Erika Mustermann</h2>
@@ -212,6 +216,6 @@
         </footer>
         <script src="scripts/headerShadow.js"></script>
         <script src="scripts/scrollToElement.js"></script>
-        <script src="scripts/slideShow.js"></script>
+        <script src="scripts/toggleNavigationContent.js"></script>
     </body>
 </html>

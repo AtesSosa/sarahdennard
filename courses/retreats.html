@@ -35,13 +35,12 @@
           </a>
         </section>
         <section id="navigation">
-          <a href="#information">
+          <a href="../index.html">
             <h2>Home</h2>
           </a>
           <div class="dropdown">
             <div class="dropdownDiv">
-
-              <a href="#courses">
+              <a href="">
                 <h2>Kurse</h2>
               </a>
               <button class="dropbtn" onclick="toggleDropdownContent()">
@@ -49,11 +48,10 @@
                 <i id="hideContent" class="fa fa-caret-up"></i>
               </button>
             </div>
-            <!-- </a> -->
             <div class="dropdown-content">
-              <a href="#">Retreats</a>
-              <a href="#">Workshops & Vorträge</a>
-              <a href="#">Consulting</a>
+              <a href="retreats.html">Retreats</a>
+              <a href="workshops.html">Workshops & Vorträge</a>
+              <a href="consulting.html">Consulting</a>
             </div>
           </div>
             <a href="#review">
@@ -71,9 +69,11 @@
         <main>
           <section class="courseText">
             <h1>Retreats</h1>
-            <div class="courseinfo">
+            <div class="courseInformation">
               <img src="../images/Meditation.gif" alt="">
-              <p>Persönliche Retreats in einer inspirierenden Umgebung (meistens in der Natur). Hier kümmere ich mich um DEINE Bedürfnisse und du erlebst Selbstfürsorge aus erster Hand, nimmst eine Auszeit vom Alltag & lernst wie du fürsorglich und achtsam in die Arbeitswelt zurückkehren kannst.</p>
+              <div class="courseMainText">
+                <p>Persönliche Retreats in einer inspirierenden Umgebung (meistens in der Natur). Hier kümmere ich mich um DEINE Bedürfnisse und du erlebst Selbstfürsorge aus erster Hand, nimmst eine Auszeit vom Alltag & lernst wie du fürsorglich und achtsam in die Arbeitswelt zurückkehren kannst.</p>
+              </div>
               <ul class="duration">
                 <li>Dauer: 2-4 Tage</li>
               </ul>
@@ -83,9 +83,9 @@
             <h1>Unverbindliche Anfrage</h1>
             <article class="contactCourseImage">
               <div class="headerMonth">
-                <button class="calenderNav" onclick="previous()"><i id="showContent" class="fa fa-chevron-left"></button></i>
+                <button class="calenderNav" onclick="previous()"><i id="showContent" class="fa fa-chevron-left"></i></button>
                 <h3 class="card-header" id="monthAndYear"></h3>
-                <button class="calenderNav" onclick="next()"><i id="showContent" class="fa fa-chevron-right"></button></i>
+                <button class="calenderNav" onclick="next()"><i id="showContent" class="fa fa-chevron-right"></i></button>
               </div>
               <div class="displayDays marginBottom">
                 <!--<label for="fname">Tage</label>-->
@@ -107,6 +107,9 @@
                  <tbody id="calendar-body">
                    </tbody>
               </table>
+              <div class="resetSelectedDays">
+                <button type="button" id="reset" onclick="reset()"><i class="fa fa-trash"></i></button>
+              </div>
             </article>
             <form action="action_page.php" class="subpageContactForm">
               <div id="user">
@@ -146,23 +149,6 @@
         </footer>
         <script src="../scripts/headerShadow.js"></script>
         <script src="../scripts/calendar.js"></script>
-        <script type="text/javascript">
-          function toggleDropdownContent(){
-              var showIcon = document.getElementById("showContent");
-              var hideIcon = document.getElementById("hideContent");
-              var dropdownContent = document.getElementsByClassName("dropdown-content");
-              if (showIcon.style.display == "block") {
-                showIcon.style.display = "none";
-                hideIcon.style.display = "block";
-                dropdownContent[0].style.display = "block";
-              }
-              else {
-                showIcon.style.display = "block";
-                hideIcon.style.display = "none";
-                dropdownContent[0].style.display = "none";
-              }
-
-            }
-        </script>
+        <script src="../scripts/toggleNavigationContent.js"></script>
     </body>
 </html>

@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
 }
+
 /* BEGIN: Calendar Table */
 table{
   width: 90%;
@@ -94,6 +95,42 @@ td {
 }
 
 @media only screen and (min-width: 100px) {
+
+  .courseMainText{
+    text-align: left;
+    width: 100%;
+  }
+
+  .resetSelectedDays {
+    width: 90%;
+    margin: 1em auto;
+    justify-content: flex-end;
+    display: flex;
+  }
+
+  button#reset {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background-color: white;
+    outline: none;
+    font-size: 15px;
+    width: 50px;
+    height: 50px;
+  }
+
+  button#reset:hover{
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    border-radius: 5px;
+  }
+
+
   #pickedDays{
     margin-top: .5em;
   }
@@ -105,6 +142,8 @@ td {
     outline: none;
     font-family: inherit;
     font-size: inherit;
+    margin-right: .5em;
+    margin-bottom: .5em;
   }
 
   #pickedDays button:hover{
@@ -226,7 +265,6 @@ td {
   }
 
   .fullSizeImage img {
-    background-color: rgb(151, 206, 206);
     width: 100%;
     align-self: center;
   }
@@ -288,6 +326,22 @@ td {
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: auto;
+  }
+
+  .courseInformation{
+    text-align: center;
+    margin: 0 0 1em 0;
+  }
+
+  .courseInformation p{
+    text-align: left;
+  }
+
+
+  .courseInformation img{
+    width: 250px;
+    height: 250px;
+    align-self: center;
   }
 
   .courseText h1{
@@ -486,7 +540,7 @@ td {
     height: 150px;
     display: flex;
     justify-content: center;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
   }
 
   footer section {
@@ -671,14 +725,14 @@ input#pickedDays {
     padding: 5px;
   }
 
-  .courseinfo{
+  .courseInformation{
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 40% 60%;
     align-items: center;
   }
 
-  .courseinfo img{
+  .courseInformation img{
     width: 100%;
     grid-row: 1 /span 2;
   }
@@ -690,17 +744,18 @@ input#pickedDays {
     display: block;
 }
 
-  .courseinfo img {
-    align-self: flex-start;
-    width: 250px;
-  }
-
-  .courseinfo{
+  .courseInformation{
     grid-template-columns: auto auto;
     grid-column-gap: 1em;
     flex-direction: row;
     align-items: center;
   }
+
+  .courseInformation img {
+    align-self: flex-start;
+    width: 250px;
+  }
+
   main{
     width: 90%;
   }
