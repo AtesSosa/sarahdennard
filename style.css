@@ -4,6 +4,330 @@
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
+  letter-spacing: 2px;
+}
+
+button, .grow { transition: all .2s ease-in-out; }
+button:hover, .grow:hover { transform: scale(1.1); }
+
+/*
+START: alternative style
+*/
+#testimonials-container{
+  width: 70%;
+  margin: 2em auto;
+}
+
+.testimonial{
+  background-color: rgb(151, 206, 206);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.testimonial-text{
+  grid-template-columns: auto auto;
+  display: grid;
+}
+.subhead {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  float: left;
+  font-size: 3rem;
+  margin: 0.1em 0.5em 0.2em 0;
+  color: #dbf0ec;
+  grid-column: 1;
+  align-self: center;
+}
+
+.inspiration-article{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.inspiration-text{
+  margin-top: 1em;
+}
+main{
+  padding-bottom: 1em;
+}
+
+.paddingTop-1{
+  padding-top: 1em;
+}
+.dropbtn-topic {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: solid 1px rgb(151, 206, 206);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.dropdown-topic {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-topic-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-topic-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-topic-content a:hover {
+  color: white;
+  background-color: rgb(151, 206, 206)
+}
+
+.dropdown-topic:hover .dropdown-topic-content {
+  display: block;
+}
+
+.dropdown-topic:hover .dropbtn-topic {
+  color: white;
+  background-color: rgb(151, 206, 206);
+}
+
+.text-align-left{
+  text-align: left!important;
+}
+.cards-container {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 3em;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button{
+  outline: none;
+}
+.card-header button {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: white;
+    margin-right: 1em;
+}
+
+.card i{
+  color: rgb(151, 206, 206);
+}
+
+.card-image img{
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card-image:hover{
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.instagram-image img{
+  width: 50%;
+  border-radius: 5px;
+}
+
+.color-red{
+  color: red;
+}
+
+.color-blue{
+  color: rgb(151, 206, 206)
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.grid-container{
+  display: grid;
+}
+
+.topic-content{
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+}
+
+.instagram-container {
+    border: solid 1px black;
+    padding: 1em;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instagram-container a, .social-media-contact a{
+  text-decoration: none;
+  color: black;
+}
+
+.social-media-contact{
+  width: 30%;
+  text-align: center;
+  margin: 0 0 0 auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+}
+
+.backgroundcolor-blue{
+  background-color: #dbf0ec;
+}
+
+.full-card {
+    grid-column: 1 / span 2;
+}
+
+.keyWord {
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.invisible-btn, .invisible-div{
+  display: none;
+}
+
+.invisible-text p{
+  margin-bottom: 1em;
+}
+
+.invisible-content{
+  background-color: rgb(151, 206, 206);
+  padding: 1em 0;
+}
+.invisible-content ul li{
+  list-style-position: inside;
+}
+
+.card-container-4-col{
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  grid-column-gap: 1%;
+}
+
+.card-container-3-col{
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-column-gap: 1em;
+}
+
+.grid-col-gap-1{
+  grid-column-gap: 1em;
+}
+
+.grid-row-gap-1{
+  grid-row-gap: 1em;
+}
+
+.card{
+  border: solid 1px black;
+  padding: 1em;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.card a{
+  text-decoration: none;
+  color: black;
+}
+
+.card ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail-image-container{
+  position: relative;
+}
+
+.image-container img{
+  width: 50%;
+}
+.mail-image-container img{
+  width: 80%;
+}
+
+#dropdown option{
+  padding: 5px;
+}
+
+.align-center{
+  text-align: center;
+  justify-content: center;
+}
+
+.align-end{
+  align-self: end;
+}
+
+
+
+/*
+END: alternative style
+*/
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 5px;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px solid black;
+  outline: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover, #myBtnContact:hover {
+  background-color: #555;
+  color: white;
+}
+
+#myBtnContact{
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px solid black;
+  outline: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
 }
 
 /* BEGIN: Calendar Table */
@@ -17,6 +341,114 @@ td {
   border-radius: 5px;
   width: 50px;
   height: 50px;
+}
+
+h1, h2, h3, h4, h5{
+  letter-spacing: 3px!important;
+}
+
+.keyWords{
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  grid-column: 1 / span 2;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: honeydew;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.active-nav{
+  border-bottom: 3px solid rgb(151, 206, 206);
+}
+
+.text-align-right{
+  text-align: right;
+}
+
+.topic-overview{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  width: 80%;
+  margin: 1em auto;
+  padding-top: 1em;
+}
+
+.paddingTop-1{
+  padding-top: 1em;
+}
+
+.paddingTopBottom-2{
+  padding: 2em 0;
+}
+
+.topic{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.topic:nth-child(-n+2){
+  border-bottom: 1px solid black;
+}
+
+.topic-keywords{
+  width: 100%;
+  margin: 0;
+  display: grid;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-template-areas:  'first-one first-two'
+                        'second-one second-two'
+                        'third-one third-two';
+  grid-row-gap: 10px;
+  grid-column-gap: 15px;
+}
+
+.topic-keywords h5:nth-child(1){
+  grid-area: first-one;
+}
+.topic-keywords h5:nth-child(2){
+  grid-area: first-two;
+}
+.topic-keywords h5:nth-child(3){
+  grid-area: second-one;
+}
+.topic-keywords h5:nth-child(4){
+  grid-area: second-two;
+}
+.topic-keywords h5:nth-child(5){
+  grid-area: third-one;
+}
+.topic-keywords h5:nth-child(6){
+  grid-area: third-two;
+}
+
+.topic a{
+  align-self: end;
+}
+.topic button, .blue-btn{
+  width: auto;
+    margin-bottom: 1em;
+    color: white;
+    background-color: rgb(151, 206, 206);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: bold;
 }
 
 #selectable {
@@ -42,12 +474,22 @@ td {
 /* END: Calendar Table */
 
 .dropdown {
-  display: inline-block;
+  float: left;
+  overflow: hidden;
 }
 
-.dropdownDiv{
-  display: grid;
-  grid-template-columns: 70% 30%;
+.full-width{
+  width: 100%;;
+}
+
+.width-90{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.width-70{
+  width: 70%;
+  margin: 0 auto;
 }
 
 .dropdown .dropbtn {
@@ -60,25 +502,31 @@ td {
   margin: 0;
 }
 
-#showContent{
+.fa-plus-square{
+  background-color: white;
+  color: rgb(151, 206, 206);
+  border: none;
+  outline: none;
+}
+
+.showContent{
   display: block;
 }
 
-#hideContent{
+.hideContent{
   display: none
 }
 
 .dropdown:hover{
+  border: 1px solid inherit;
+  border-radius: 5px;
   background-color: rgb(151, 206, 206);
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  display: flex;
+  grid-row: 2;
+  grid-column: 1 / -1;
 }
 
 .dropdown-content a {
@@ -88,49 +536,40 @@ td {
   text-decoration: none;
   display: block;
   text-align: left;
+  font-size: 15px;
 }
 
 .dropdown-content a:hover {
+  border: 1px solid inherit;
+  border-radius: 5px;
   background-color: #ddd;
 }
 
+.home-title{
+  /*
+  padding: 10px;
+  border: 1px solid black;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  */
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  border: 1px solid black;
+  padding: 10px;
+}
+#home h3{
+  padding: 10px;
+  border: 1px solid black;
+  width: 60%;
+  margin: 1em auto;
+  font-size: 1.4em;
+}
+
 @media only screen and (min-width: 100px) {
-
-  .courseMainText{
-    text-align: left;
-    width: 100%;
-  }
-
-  .resetSelectedDays {
-    width: 90%;
-    margin: 1em auto;
-    justify-content: flex-end;
-    display: flex;
-  }
-
-  button#reset {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    background-color: white;
-    outline: none;
-    font-size: 15px;
-    width: 50px;
-    height: 50px;
-  }
-
-  button#reset:hover{
-    border: 1px solid red;
-    background-color: white;
-    color: red;
-    border-radius: 5px;
-  }
-
-
   #pickedDays{
     margin-top: .5em;
   }
@@ -142,8 +581,6 @@ td {
     outline: none;
     font-family: inherit;
     font-size: inherit;
-    margin-right: .5em;
-    margin-bottom: .5em;
   }
 
   #pickedDays button:hover{
@@ -154,11 +591,10 @@ td {
     background-color: red;
     color: white;
   }
-
   button.calenderNav {
     border-radius: 5px;
     width: 50%;
-    height: 100%;
+    height: 75%;
     border: none;
     outline: none;
   }
@@ -167,7 +603,7 @@ td {
     position: sticky;
     top: 0;
     background-color: white;
-    min-height: 100px;
+    height: 100px;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -221,7 +657,8 @@ td {
 
   #navigation {
     display: grid;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(5, 16.6%);
+    grid-template-rows: auto auto;
     flex-direction: row;
     justify-content: center;
     text-align: center;
@@ -241,11 +678,12 @@ td {
   #navigation h2:hover {
     text-decoration: none;
   }
-
+/*
   main {
     width: 80%;
     margin: auto;
   }
+*/
 
   main h1 {
     font-size: 30px;
@@ -254,17 +692,21 @@ td {
   }
 
   #home {
-    margin-bottom: 1em;
+    /*margin-top: 3em;*/
+    margin-bottom: 3em;
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
 
   .fullSizeImage {
     width: 100%;
     text-align: center;
+    position: relative;
   }
 
   .fullSizeImage img {
+    background-color: rgb(151, 206, 206);
     width: 100%;
     align-self: center;
   }
@@ -321,42 +763,12 @@ td {
     margin: 1em 0;
   }
 
-  .courseText{
-    text-align: center;
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto;
-  }
-
-  .courseInformation{
-    text-align: center;
-    margin: 0 0 1em 0;
-  }
-
-  .courseInformation p{
-    text-align: left;
-  }
-
-
-  .courseInformation img{
-    width: 250px;
-    height: 250px;
-    align-self: center;
-  }
-
-  .courseText h1{
-    grid-row: 1;
-  }
-
   .courseinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: left;
     margin: 0 0 1em 0;
-  }
-
-  .courseinfo img{
-    width: 250px;
-    height: 250px;
-    align-self: center;
   }
 
   p {
@@ -488,11 +900,11 @@ td {
     flex-direction: column;
     width: 100%;
   }
-
+/*
   form label {
     margin-bottom: 0.5em;
   }
-
+*/
   #contact .contactInput {
     padding: 15px;
   }
@@ -540,7 +952,7 @@ td {
     height: 150px;
     display: flex;
     justify-content: center;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
   }
 
   footer section {
@@ -560,35 +972,37 @@ td {
   }
 
   .marginTop {
+    margin-top: 2em;
+  }
+
+  .marginTop-1em {
     margin-top: 1em;
   }
 
   .marginBottom {
+    margin-bottom: 2em;
+  }
+
+  .marginBottom-1{
     margin-bottom: 1em;
   }
 
   #contactRetreats {
+    background-color: white;
     margin: 1em auto;
+    position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     box-shadow: rgb(136, 136, 136) 5px 10px 18px;
   }
 
-  .headerMonth {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    align-items: center;
-    text-align: center;
-    justify-items: center;
-  }
-
   .contactCourseImage {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 5px;
+    display: none;
   }
 
+  .contactCourseImage img {
+    display: none;
+  }
 
   textarea {
      font-family: inherit;
@@ -596,6 +1010,7 @@ td {
      min-height: 200px;
      padding: 5px;
      border-radius: 5px;
+     margin-top: 0.5em;
   }
   .subpageContactForm {
     margin: auto;
@@ -605,28 +1020,29 @@ td {
     width: 90%;
   }
 
-  .subpageContactForm input {
+  .subpageContactForm input, #dropdown {
     min-height: 35px;
     padding: 5px;
     font-family: inherit;
     font-size: inherit;
+    margin-top: 0.5em;
   }
 
   #contactRetreats h1 {
     margin-top: .5em;
     margin-bottom: .5em;
-    text-align: center;
   }
 
   #user {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
   }
 
   .userInformation {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 95%;
   }
 
   .displayDays {
@@ -649,7 +1065,7 @@ input#pickedDays {
   }
 
   #title {
-    width: 30%;
+    width: 20%;
   }
 
   #title h1 {
@@ -661,12 +1077,44 @@ input#pickedDays {
   }
 
   #navigation {
-    width: 70%;
+    width: 80%;
   }
 
   #navigation h2 {
     font-size: 2.5vw;
   }
+
+  .grid-temlate-50-50{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+.grid-template-two-rows{
+  grid-template-rows: auto auto;
+}
+
+
+  .grid-column-1{
+    grid-column: 1;
+  }
+
+  .grid-column-2{
+    grid-column: 2;
+  }
+
+  .grid-row-1{
+    grid-row: 1;
+  }
+
+  .grid-row-2{
+    grid-row: 2;
+  }
+
+  .grid-column-end{
+    grid-column: 1 / -1;
+  }
+
+
 
   #courses article {
     width: 60%;
@@ -707,16 +1155,6 @@ input#pickedDays {
   #contactRetreats{
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-template-rows: auto auto;
-  }
-
-  #contactRetreats h1{
-    grid-row: 1;
-    grid-column: 1 /span 2;
-  }
-
-  .contactCourseImage, form{
-    grid-row: 2;
   }
 
   .subpageContactForm {
@@ -725,41 +1163,33 @@ input#pickedDays {
     padding: 5px;
   }
 
-  .courseInformation{
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 40% 60%;
-    align-items: center;
-  }
+.headerMonth {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
 
-  .courseInformation img{
+  .contactCourseImage {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    grid-row: 1 /span 2;
+    padding: 5px;
   }
 
+  .contactCourseImage img {
+    display: block;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 900px) {
-  .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-  .courseInformation{
-    grid-template-columns: auto auto;
-    grid-column-gap: 1em;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .courseInformation img {
-    align-self: flex-start;
-    width: 250px;
-  }
-
+  /*
   main{
     width: 90%;
   }
-
+*/
   #title h1 {
     font-size: 2vw;
   }
@@ -769,7 +1199,7 @@ input#pickedDays {
   }
 
   #navigation h2 {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
   }
 
   .fullSizeImage img {

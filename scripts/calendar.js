@@ -11,7 +11,6 @@ showCalendar(currentMonth, currentYear);
 
 let elemText = [];
 let elemArray = [];
-
 function selectDate(elem) {
   var dispDays = document.getElementById("pickedDays");
   if(!elem.classList.contains("selectedDate")){
@@ -34,19 +33,6 @@ function selectDate(elem) {
     elemArray.splice(elemArray.indexOf(elem.id), 1);
     $("button:contains('"+ elem.id+"')").remove();
   }
-}
-
-function reset(){
-  var pickedDaysDiv = document.getElementById("pickedDays");
-  pickedDaysDiv.innerHTML = "";
-
-  var cell = document.getElementsByClassName("selectedDate");
-  var i = 0;
-  while(cell.length > 0){
-    cell[i].classList.remove("selectedDate");
-  }
-  var x = elemArray.length;
-  elemArray.splice(0, x);
 }
 
 function removeBtn(btn) {

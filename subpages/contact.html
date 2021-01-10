@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sarah Dennard | Achtsamkeit & Well-being </title>
+        <meta name="description" content="Lebenslauf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+        <link rel="stylesheet" href="../style.css">
+
+        <!-- for jQuery-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <!-- responsive style
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <!-- for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link href="./fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"> -->
+        <!-- for fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+      <!-- SART: Header -->
+      <header id="header">
+        <section id="title">
+          <a href="../index.html">
+            <h1>Sarah Dennard</h1>
+            <section id="subtitle">
+              <h3>Achtsamkeit & Well-being</h3>
+            </section>
+          </a>
+        </section>
+        <section id="navigation">
+          <div class="dropdown">
+            <a href="./aboutMe.html">
+              <button class="dropbtn"><h2>Über mich</h2></button>
+            </a>
+          </div>
+          <div class="dropdown">
+            <a href="./portfolio.html">
+                <button class="dropbtn"><h2>Portfolio</h2></button>
+            </a>
+          </div>
+          <div class="dropdown">
+            <a href="./testimonials.html">
+              <button class="dropbtn"><h2>Erfolgsstories</h2></button>
+            </a>
+          </div>
+          <div class="dropdown">
+            <a href="./inspiration.html">
+              <button class="dropbtn"><h2>Inspirationen</h2></button>
+            </a>
+          </div>
+          <div class="dropdown">
+            <a href="./contact.html" class="active-nav">
+              <button class="dropbtn"><h2>Kontakt</h2></button>
+            </a>
+          </div>
+        </section>
+      </header>
+      <!-- END: Header -->
+        <!-- main -->
+        <main class="paddingTopBottom-2 backgroundcolor-blue">
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <i class="fa fa-arrow-up"></i>
+          </button>
+          <button onclick="location.href='./contact.html';" id="myBtnContact" title="Contact me">
+            <i class="fa fa-question-circle"></i>
+          </button>
+          <!-- IMAGE
+          <section class="align-center mail-image-container">
+            <img src="../images/Sarah/mail01.jpg" alt="">
+          </section>-->
+          <section class="width-70" id="contactRetreats">
+            <!--<div class="mail-form">-->
+              <article class="contactCourseImage left-50">
+                <!-- <img src="../images/women_yoga.jpg" alt=""> -->
+                <div class="headerMonth">
+                  <button class="calenderNav" onclick="previous()"><i id="showContent" class="fa fa-chevron-left"></button></i>
+                  <h2 class="card-header" id="monthAndYear"></h2>
+                  <button class="calenderNav" onclick="next()"><i id="showContent" class="fa fa-chevron-right"></button></i>
+                </div>
+                <div class="displayDays marginBottom">
+                  <!--<label for="fname">Tage</label>-->
+                  <!-- <div id="pickedDays"></div> -->
+                  <!--<input type="text" id="pickedDays" class="" name="email" placeholder="">-->
+                </div>
+                <table class="table" id="calendar">
+                  <thead>
+                    <tr>
+                      <th>Mo</th>
+                      <th>Di</th>
+                      <th>Mi</th>
+                      <th>Do</th>
+                      <th>Fr</th>
+                      <th>Sa</th>
+                      <th>So</th>
+                    </tr>
+                  </thead>
+                   <tbody id="calendar-body">
+                     </tbody>
+                </table>
+              </article>
+              <div class="marginTop marginBottom social-media-contact grid-row-1 grid-column-end">
+                <a href="https://www.instagram.com/mindfulempathy" target="_blank">
+                  <i class="fa fa-instagram fa-2x grow"></i>
+                </a>
+                <a href="#" target="_blank">
+                  <i class="fa fa-facebook-square fa-2x grow"></i>
+                </a>
+              </div>
+              <form action="action_page.php" class="subpageContactForm left-50">
+                <!--<h1>Anfrage</h1>-->
+                <div id="topic">
+                  <div class="dropdown-topic marginBottom">
+                    <form>
+                      <label for="dropdown">Thema</label>
+                      <br>
+                      <select id="dropdown">
+                        <option selected disabled>Wähle ein Thema aus</option>
+                        <option value="emotionaleIntelligenz">Emotionale Intelligenz</option>
+                        <option value="Achtsamkeit">Achtsamkeit</option>
+                        <option value="Kulturwandel">Kulturwandel</option>
+                        <option value="Wellbeing">Wellbeing</option>
+                        <option value="Frage">Frage</option>
+                        <option value="Sonstiges">Sonstiges</option>
+                      </select>
+                    <form>
+                    <!--
+                    <button class="dropbtn-topic">Thema</button>
+                    <div class="dropdown-topic-content">
+                      <a href="#">Emotionale Intelligenz</a>
+                      <a href="#">Achtsamkeit</a>
+                      <a href="#">Kulturwandel</a>
+                      <a href="#">Wellbeing</a>
+                      <a href="#">Frage</a>
+                      <a href="#">Sonstiges</a>
+                    </div>
+                  -->
+                  </div>
+                </div>
+                <div id="user">
+                  <div class="userInformation">
+                    <label for="fname">Unternehmen/Schule*</label>
+                    <input type="text" id="fname" class="contactInput marginBottom" name="firstname" placeholder="">
+                  </div>
+                  <div class="userInformation grid-row-2">
+                    <label for="lname">E-Mail Adresse*</label>
+                    <input type="text" id="email" class="contactInput marginBottom" name="email" placeholder="">
+                  </div>
+                  <div class="userInformation grid-row-2">
+                    <label for="lname">Telefonnummer</label>
+                    <input type="text" id="phone" class="contactInput marginBottom" name="phone" placeholder="">
+                  </div>
+                </div>
+                <div class="displayDays marginBottom">
+                  <label for="fname">Tage</label>
+                  <div id="pickedDays"></div>
+                  <!--<input type="text" id="pickedDays" class="" name="email" placeholder="">-->
+                </div>
+                <label for="subject">Nachricht</label>
+                <textarea id="mailText" class="contactInput marginBottom" name="mailText" placeholder=""></textarea>
+                <div id="dataprotection" class="marginBottom">
+                  <input type="checkbox" name="" value=""><p>Ich habe die <a href="">Datenschutzerklärung</a>  zur Kenntnis genommen und erkläre mich damit einverstanden.</p></input>
+                </div>
+                <input type="submit" value="Absenden" id="submitBtn" class="contactInput btn marginBottom">
+              </form>
+            <!--</div>-->
+          </section>
+
+        </main>
+        <!-- footer -->
+        <footer>
+          <section>
+            <a href=""><h3>Impressum</h3></a>
+            <a href=""><h3>Datenschutz</h3></a>
+            <a href=""><h3>Cookie-Richtlinie</h3></a>
+            <a href=""><h3>Cookie-Einstellungen</h3></a>
+          </section>
+        </footer>
+        <script src="../scripts/headerShadow.js"></script>
+        <script src="../scripts/calendar.js"></script>
+        <script src="../scripts/scrollToTop.js"></script>
+        <script type="text/javascript">
+          function toggleContent(){
+              var showIcon = document.getElementById("showContent");
+              var hideIcon = document.getElementById("hideContent");
+              var dropdownContent = document.getElementsByClassName("dropdown-content");
+              if (showIcon.style.display == "block") {
+                showIcon.style.display = "none";
+                hideIcon.style.display = "block";
+                dropdownContent[0].style.display = "block";
+              }
+              else {
+                showIcon.style.display = "block";
+                hideIcon.style.display = "none";
+                dropdownContent[0].style.display = "none";
+              }
+
+            }
+        </script>
+    </body>
+</html>
