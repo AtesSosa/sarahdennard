@@ -13,11 +13,21 @@ button:hover, .grow:hover { transform: scale(1.1); }
 /*
 START: alternative style
 */
+.display-grid{
+  display: grid;
+}
 #testimonials-container{
   width: 70%;
   margin: 2em auto;
 }
 
+.card-container-2-col{
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-template-rows: auto auto;
+  grid-row-gap: 1em;
+  justify-content: space-evenly;
+}
 .testimonial{
   background-color: rgb(151, 206, 206);
   padding: 1em;
@@ -140,7 +150,7 @@ button{
 }
 
 .instagram-image img{
-  width: 50%;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -161,14 +171,13 @@ button{
 }
 
 .topic-content{
-  grid-template-columns: auto auto;
   grid-template-rows: auto;
 }
 
 .instagram-container {
     border: solid 1px black;
     padding: 1em;
-    width: 30%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -184,7 +193,7 @@ button{
   margin: 0 0 0 auto;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto auto;
 }
 
 .backgroundcolor-blue{
@@ -219,17 +228,19 @@ button{
 .invisible-content ul li{
   list-style-position: inside;
 }
-
-.card-container-4-col{
+.card-container-1-col{
   display: grid;
-  grid-template-columns: repeat(4, 24%);
-  grid-column-gap: 1%;
+  grid-template-columns: auto;
+  justify-content: space-between;
+  grid-row-gap: 1em;
 }
 
-.card-container-3-col{
-  display: grid;
-  grid-template-columns: repeat(3, 33.33%);
-  grid-column-gap: 1em;
+.card-container-1-col .card{
+  padding: 1em;
+}
+
+.card-container-1-col .card h4{
+  font-size: 13px;
 }
 
 .grid-col-gap-1{
@@ -242,7 +253,6 @@ button{
 
 .card{
   border: solid 1px black;
-  padding: 1em;
   border-radius: 5px;
   align-items: center;
 }
@@ -347,6 +357,10 @@ h1, h2, h3, h4, h5{
   letter-spacing: 3px!important;
 }
 
+.card h4{
+  font-size: 10px;
+}
+
 .keyWords{
   width: 100%;
   height: 50px;
@@ -376,11 +390,14 @@ h1, h2, h3, h4, h5{
 
 .topic-overview{
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  width: 80%;
+  grid-template-columns: auto;
+  width: 100%;
   margin: 1em auto;
   padding-top: 1em;
+}
+
+.topic{
+  border-bottom: 1px solid black;
 }
 
 .paddingTop-1{
@@ -400,10 +417,6 @@ h1, h2, h3, h4, h5{
   margin: 0 auto;
 }
 
-.topic:nth-child(-n+2){
-  border-bottom: 1px solid black;
-}
-
 .topic-keywords{
   width: 100%;
   margin: 0;
@@ -416,6 +429,7 @@ h1, h2, h3, h4, h5{
                         'third-one third-two';
   grid-row-gap: 10px;
   grid-column-gap: 15px;
+  font-size: 11px;
 }
 
 .topic-keywords h5:nth-child(1){
@@ -527,6 +541,7 @@ h1, h2, h3, h4, h5{
   display: flex;
   grid-row: 2;
   grid-column: 1 / -1;
+  background-color: #dbf0ec;
 }
 
 .dropdown-content a {
@@ -536,7 +551,7 @@ h1, h2, h3, h4, h5{
   text-decoration: none;
   display: block;
   text-align: left;
-  font-size: 15px;
+  font-size: 2.5vw;;
 }
 
 .dropdown-content a:hover {
@@ -546,25 +561,12 @@ h1, h2, h3, h4, h5{
 }
 
 .home-title{
-  /*
-  padding: 10px;
-  border: 1px solid black;
-  width: 30%;
-  margin: 0 auto;
   text-align: center;
-  */
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  border: 1px solid black;
-  padding: 10px;
 }
 #home h3{
   padding: 10px;
   border: 1px solid black;
-  width: 60%;
+  width: 100%;
   margin: 1em auto;
   font-size: 1.4em;
 }
@@ -600,13 +602,12 @@ h1, h2, h3, h4, h5{
   }
 
   #header {
-    position: sticky;
     top: 0;
     background-color: white;
-    height: 100px;
     z-index: 2;
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid lightgray;
   }
 
   .header {
@@ -657,7 +658,7 @@ h1, h2, h3, h4, h5{
 
   #navigation {
     display: grid;
-    grid-template-columns: repeat(5, 16.6%);
+    grid-template-columns: repeat(3, 33.33%);
     grid-template-rows: auto auto;
     flex-direction: row;
     justify-content: center;
@@ -668,9 +669,9 @@ h1, h2, h3, h4, h5{
   }
 
   #navigation h2 {
-    font-weight: 300;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 3vw;
+    font-size: 2.5vw;
     padding: 14px 0;
     width: 100%;
   }
@@ -1060,7 +1061,60 @@ input#pickedDays {
   }
 
 @media only screen and (min-width: 600px) {
+  #home h3{
+    width: 60%!important;
+  }
+  .card-container-3-col{
+    grid-template-columns: repeat(3, 33.33%)!important;
+    grid-column-gap: 1em!important;
+  }
+  .topic-overview{
+    width: 80%
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .topic-content{
+    grid-template-columns: auto auto;
+  }
+
+  .topic-keywords{
+    font-size: unset;
+  }
+
+  .topic:nth-child(-n+2){
+    border-bottom: 1px solid black;
+  }
+
+  .dropdown-content {
+    background-color: white;
+  }
+
+  .dropdown-content a{
+    font-size: 16px;
+  }
+  .instagram-container{
+    width: 30%;
+  }
+
+  .instagram-image img{
+    width: 50%;
+  }
+  .card{
+    padding: 1em;
+  }
+
+  .card h4{
+    font-size: unset;
+  }
+  .card-container-4-col{
+    grid-template-columns: repeat(4, 24%)!important;
+    grid-column-gap: 1%!important;
+  }
+
   #header {
+    position: sticky;
+    height: 100px;
     flex-direction: row;
   }
 
@@ -1077,11 +1131,13 @@ input#pickedDays {
   }
 
   #navigation {
+    grid-template-columns: repeat(5, 20%);
     width: 80%;
   }
 
   #navigation h2 {
     font-size: 2.5vw;
+    font-weight: normal;
   }
 
   .grid-temlate-50-50{
