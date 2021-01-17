@@ -21,6 +21,10 @@ START: alternative style
   margin: 2em auto;
 }
 
+.width-50 img{
+  width: 50%;
+  margin: 2em;
+}
 .card-container-2-col{
   display: grid;
   grid-template-columns: repeat(2, 40%);
@@ -562,6 +566,12 @@ h1, h2, h3, h4, h5{
 
 .home-title{
   text-align: center;
+  font-size: 25px;
+  line-height: 2em;
+}
+
+.home-title img{
+  width: 50%;
 }
 #home h3{
   padding: 10px;
@@ -1069,7 +1079,7 @@ input#pickedDays {
     grid-column-gap: 1em!important;
   }
   .topic-overview{
-    width: 80%
+    width: 80%;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
   }
