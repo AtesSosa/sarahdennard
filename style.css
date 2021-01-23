@@ -13,6 +13,10 @@ button:hover, .grow:hover { transform: scale(1.1); }
 /*
 START: alternative style
 */
+
+.display-none{
+  display: none;
+}
 .display-grid{
   display: grid;
 }
@@ -192,7 +196,7 @@ button{
 }
 
 .social-media-contact{
-  width: 30%;
+  width: 100%;
   text-align: center;
   margin: 0 0 0 auto;
   display: grid;
@@ -1003,7 +1007,7 @@ h1, h2, h3, h4, h5{
     margin: 1em auto;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     box-shadow: rgb(136, 136, 136) 5px 10px 18px;
   }
 
@@ -1047,7 +1051,7 @@ h1, h2, h3, h4, h5{
   #user {
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
   }
 
   .userInformation {
@@ -1074,6 +1078,15 @@ input#pickedDays {
   #home h3{
     width: 60%!important;
   }
+
+  .social-media-contact{
+    width: 30%;
+  }
+
+  #user{
+    grid-template-columns: auto auto;
+  }
+
   .card-container-3-col{
     grid-template-columns: repeat(3, 33.33%)!important;
     grid-column-gap: 1em!important;
