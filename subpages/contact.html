@@ -74,16 +74,14 @@
           <section class="width-70" id="contactRetreats">
             <!--<div class="mail-form">-->
               <article class="contactCourseImage left-50">
-                <!-- <img src="../images/women_yoga.jpg" alt=""> -->
+
                 <div class="headerMonth">
                   <button class="calenderNav" onclick="previous()"><i id="showContent" class="fa fa-chevron-left"></button></i>
                   <h2 class="card-header" id="monthAndYear"></h2>
                   <button class="calenderNav" onclick="next()"><i id="showContent" class="fa fa-chevron-right"></button></i>
                 </div>
                 <div class="displayDays marginBottom">
-                  <!--<label for="fname">Tage</label>-->
-                  <!-- <div id="pickedDays"></div> -->
-                  <!--<input type="text" id="pickedDays" class="" name="email" placeholder="">-->
+
                 </div>
                 <table class="table" id="calendar">
                   <thead>
@@ -115,7 +113,7 @@
                   <i class="fa fa-linkedin fa-2x grow"></i>
                 </a>
               </div>
-              <form action="action_page.php" class="subpageContactForm left-50">
+              <form method="post" action="../scripts/send_email.php" class="subpageContactForm left-50">
                 <!--<h1>Anfrage</h1>-->
                 <div id="topic">
                   <div class="dropdown-topic marginBottom">
@@ -132,40 +130,28 @@
                         <option value="Sonstiges">Sonstiges</option>
                       </select>
                     <form>
-                    <!--
-                    <button class="dropbtn-topic">Thema</button>
-                    <div class="dropdown-topic-content">
-                      <a href="#">Emotionale Intelligenz</a>
-                      <a href="#">Achtsamkeit</a>
-                      <a href="#">Kulturwandel</a>
-                      <a href="#">Wellbeing</a>
-                      <a href="#">Frage</a>
-                      <a href="#">Sonstiges</a>
-                    </div>
-                  -->
                   </div>
                 </div>
                 <div id="user">
                   <div class="userInformation">
                     <label for="fname">Unternehmen/Schule*</label>
-                    <input type="text" id="fname" class="contactInput marginBottom" name="firstname" placeholder="">
+                    <input type="text" id="fname" class="contactInput marginBottom" name="Unternehmen/Schule" placeholder="">
                   </div>
                   <div class="userInformation grid-row-2">
-                    <label for="lname">E-Mail Adresse*</label>
-                    <input type="text" id="email" class="contactInput marginBottom" name="email" placeholder="">
+                    <label for="EMail">E-Mail Adresse*</label>
+                    <input type="text" id="EMail" class="contactInput marginBottom" name="E-Mail" placeholder="">
                   </div>
                   <div class="userInformation grid-row-2">
-                    <label for="lname">Telefonnummer</label>
-                    <input type="text" id="phone" class="contactInput marginBottom" name="phone" placeholder="">
+                    <label for="phone">Telefonnummer</label>
+                    <input type="text" id="phone" class="contactInput marginBottom" name="Telefonnummer" placeholder="">
                   </div>
                 </div>
                 <div class="displayDays marginBottom">
                   <label for="fname">Tage</label>
                   <div id="pickedDays"></div>
-                  <!--<input type="text" id="pickedDays" class="" name="email" placeholder="">-->
                 </div>
                 <label for="subject">Nachricht</label>
-                <textarea id="mailText" class="contactInput marginBottom" name="mailText" placeholder=""></textarea>
+                <textarea id="mailText" class="contactInput marginBottom" name="Nachricht" placeholder=""></textarea>
                 <div id="dataprotection" class="marginBottom">
                   <input type="checkbox" name="" value=""><p>Ich habe die <a href="">Datenschutzerklärung</a>  zur Kenntnis genommen und erkläre mich damit einverstanden.</p></input>
                 </div>
@@ -178,10 +164,10 @@
         <!-- footer -->
         <footer>
           <section>
-            <a href=""><h3>Impressum</h3></a>
+            <a href="./impressum.html"><h3>Impressum</h3></a>
             <a href=""><h3>Datenschutz</h3></a>
-            <a href=""><h3>Cookie-Richtlinie</h3></a>
-            <a href=""><h3>Cookie-Einstellungen</h3></a>
+            <!--<a href=""><h3>Cookie-Richtlinie</h3></a>
+            <a href=""><h3>Cookie-Einstellungen</h3></a>-->
           </section>
         </footer>
         <script src="../scripts/headerShadow.js"></script>

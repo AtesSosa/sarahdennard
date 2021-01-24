@@ -721,7 +721,6 @@ h1, h2, h3, h4, h5{
   }
 
   .fullSizeImage img {
-    background-color: rgb(151, 206, 206);
     width: 100%;
     align-self: center;
   }
@@ -936,6 +935,7 @@ h1, h2, h3, h4, h5{
   #dataprotection{
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   #dataprotection a {
